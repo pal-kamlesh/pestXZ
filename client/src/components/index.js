@@ -6,6 +6,9 @@ import ContactUs from "./ContactUs";
 import Footer from "./Footer";
 import Accordian from "./Accordian";
 import QuoteModal from "./QuoteModel";
+import GetInTouch from "./GetInTouch";
+import { ShiftingDropDown } from "./Dropdown";
+import Topbar from "./Topbar";
 
 export {
   HeroSection,
@@ -16,4 +19,7 @@ export {
   Footer,
   Accordian,
   QuoteModal,
+  ShiftingDropDown,
+  GetInTouch,
+  Topbar,
 };

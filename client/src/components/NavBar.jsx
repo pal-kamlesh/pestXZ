@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import QuoteModal from "./QuoteModel";
+import { Link, useLocation } from "react-router-dom";
+import { DropdownItem, Dropdown } from "./Dropdown";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [modal, setModal] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,15 +23,20 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   function toggleModel() {
     setModal(!modal);
   }
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-[#003229]" : "bg-transparent"
-      }`}
+      className={`fixed w-full z-50 transition-colors duration-300 ${
+        isScrolled
+          ? "bg-[#003229] top-0"
+          : location.pathname !== "/"
+          ? "bg-[#003229]"
+          : "bg-transparent top-10"
+      } `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -38,23 +46,31 @@ const Navbar = () => {
           </div>
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-8">
-            <a
-              href="#home"
-              className="text-white hover:text-[#FBBF24] transition"
-            >
+            <Link to="/" className="text-white hover:text-[#FBBF24] transition">
               Home
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              to="/about"
               className="text-white hover:text-[#FBBF24] transition"
             >
               About Us
-            </a>
+            </Link>
             <a
               href="#services"
               className="text-white hover:text-[#FBBF24] transition"
             >
-              Services
+              <Dropdown label="Services">
+                <DropdownItem label="Commercial">
+                  <DropdownItem label="Termite Control" />
+                  <DropdownItem label="Rodent Control" />
+                  <DropdownItem label="Insect Removal" />
+                </DropdownItem>
+                <DropdownItem label="Residential">
+                  <DropdownItem label="Bed Bug Treatment" />
+                  <DropdownItem label="Mosquito Control" />
+                  <DropdownItem label="Cockroach Control" />
+                </DropdownItem>
+              </Dropdown>
             </a>
             <a
               href="#contact"
