@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import QuoteModal from "./QuoteModel";
 import { Link, useLocation } from "react-router-dom";
 import { DropdownItem, Dropdown } from "./Dropdown";
-
+import logo from "../images/epcorn.png";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,8 +41,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-[#FBBF24]">EPCORN</h1>
+          <div className="flex items-center justify-center space-x-1">
+            <img src={logo} alt="EPCORN Logo" className="h-10 w-auto" />
+            <h1 className="text-2xl font-bold text-[#FBBF24] font-serif">
+              EPCORN
+            </h1>
           </div>
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-8">

@@ -3,9 +3,9 @@ import { ContactUs } from "../components";
 const AboutPage = () => {
   return (
     <>
-      <div className="container mx-auto p-6">
+      <div className="container mx-auto p-10">
         {/* Corporate Profile Section */}
-        <section className="mb-12">
+        <section className="mb-12 mt-10">
           <div className="flex flex-col md:flex-row items-center">
             {/* Replacing ImagePlaceholder with div */}
             <div
@@ -13,9 +13,11 @@ const AboutPage = () => {
               style={{
                 backgroundColor: "#D1FAE5", // Light green background
                 height: "300px", // Set fixed height
-                backgroundImage: "url('path_to_corporate_image.jpg')", // Image background
-                backgroundSize: "cover", // Cover the div
-                backgroundPosition: "center", // Center the image
+                backgroundImage:
+                  "url(https://res.cloudinary.com/epcorn/image/upload/v1641465819/signature/Epcorn_logo_super-min_si1wja.jpg)", // Image background
+                backgroundSize: "contain", // Cover the div
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat", // Center the image
               }}
               alt="Corporate Profile"
             />
@@ -68,9 +70,11 @@ const AboutPage = () => {
                 className="w-full h-48 object-cover rounded-lg shadow-lg mb-4"
                 style={{
                   backgroundColor: "#FEF3C7", // Light yellow background
-                  backgroundImage: "url('path_to_award_image.jpg')", // Image background
-                  backgroundSize: "cover", // Cover the div
+                  backgroundImage:
+                    "url(https://res.cloudinary.com/epcorn/image/upload/v1641465819/signature/Epcorn_logo_super-min_si1wja.jpg)", // Image background
+                  backgroundSize: "contain", // Cover the div
                   backgroundPosition: "center", // Center the image
+                  backgroundRepeat: "no-repeat",
                 }}
                 alt="Award"
               />
@@ -85,9 +89,11 @@ const AboutPage = () => {
                 className="w-full h-48 object-cover rounded-lg shadow-lg mb-4"
                 style={{
                   backgroundColor: "#FEF3C7", // Light yellow background
-                  backgroundImage: "url('path_to_affiliation_image.jpg')", // Image background
-                  backgroundSize: "cover", // Cover the div
+                  backgroundImage:
+                    "url(https://www.pestcontrolenterprise.com/images/membership/2-ipca.png)", // Image background
+                  backgroundSize: "contain", // Cover the div
                   backgroundPosition: "center", // Center the image
+                  backgroundRepeat: "no-repeat",
                 }}
                 alt="Affiliation"
               />

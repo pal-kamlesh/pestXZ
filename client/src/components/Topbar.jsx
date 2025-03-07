@@ -2,7 +2,8 @@ import { FaFacebook, FaSearch } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa6";
-
+import { MdEmail } from "react-icons/md";
+import { BsFillTelephoneFill } from "react-icons/bs";
 export default function Topbar() {
   return (
     <div className="w-full bg-yellow-400 text-black py-2">
@@ -10,16 +11,12 @@ export default function Topbar() {
         {/* Contact Info */}
         <div className="flex space-x-6 text-sm">
           <a href="#" className="flex items-center">
-            <i className="fas fa-map-marker-alt mr-2"></i>
-            Santacruz (W), Mumbai - 400054
+            <BsFillTelephoneFill className=" mr-2" />
+            <span>6138 6600</span>
           </a>
           <a href="#" className="flex items-center">
-            <i className="fas fa-phone-alt mr-2"></i>
-            6138 6600
-          </a>
-          <a href="#" className="flex items-center">
-            <i className="fas fa-envelope mr-2"></i>
-            epcorn@yahoo.com
+            <MdEmail className=" mr-2" />
+            <span>epcorn@yahoo.com</span>
           </a>
         </div>
 

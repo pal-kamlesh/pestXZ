@@ -4,10 +4,10 @@ import {
   ContactUs,
   GetInTouch,
   HeroSection,
-  ShiftingDropDown,
   Topbar,
   WhyChooseUs,
 } from "../components/index.js";
+import SwiperComponent from "../components/SwiperComponent.jsx";
 function Home() {
   return (
     <div>
@@ -18,8 +18,6 @@ function Home() {
       <AboutUs />
       <ContactUs />
       <Accordian />
-
-      <ShiftingDropDown />
     </div>
   );
 }
