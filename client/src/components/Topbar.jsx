@@ -7,7 +7,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 export default function Topbar() {
   return (
     <div className="w-full bg-yellow-400 text-black py-2">
-      <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
+      <div className="container mx-auto flex justify-end sm:justify-between items-center px-4 md:px-8">
         {/* Contact Info */}
         <div className="flex space-x-6 text-sm">
           <a href="#" className="flex items-center">
@@ -33,7 +33,7 @@ export default function Topbar() {
         </div>
 
         {/* Social Icons */}
-        <div className="flex space-x-4 text-lg">
+        <div className="hidden sm:flex sm:space-x-4 sm:text-lg">
           <a href="#" className="hover:text-gray-700">
             <FaFacebook />
           </a>
